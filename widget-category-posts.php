@@ -1,15 +1,10 @@
 <?php
 /*
 Plugin Name:  Posts from a Specific Category
-Plugin URI:   
-Description:  
+Description:  Adds a widget that shows the latest posts from one or more categories.
 Version:      1.0
 Author:       Anton Anastasiia
-Author URI:   
-License:      
-License URI:  
-Text Domain:  
-Domain Path:  
+License:  GPLv2 or later     
 */
 
 add_action( 'widgets_init', 'posts_category_widgets' );
