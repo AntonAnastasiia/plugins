@@ -116,7 +116,7 @@ class Posts_Category extends WP_Widget {
 				'order'   => 'ASC',
 				'hide_empty' => false
 			) );
-        ?>
+        	?>
 		<p>
 			<label for="categories">Select category:</label>
 		</p>
@@ -127,8 +127,8 @@ class Posts_Category extends WP_Widget {
 		?>
 	 		<input class="checkbox" type="checkbox" <?php checked( $instance[$cat], 'on' ); ?> id="<?php echo $this->get_field_id( $cat ); ?>" name="<?php echo $this->get_field_name( $cat ); ?>" /> <label for="<?php echo $this->get_field_id( $cat ); ?>"><?php echo $category->name; ?></label>
 		<?php } ?>
-    	</p>
-    	<p>
+	    	</p>
+    		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php echo esc_html__( 'Number of posts to show:', 'text_domain' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>">
 		</p>
@@ -140,14 +140,14 @@ class Posts_Category extends WP_Widget {
     		<label for="<?php echo $this->get_field_id( 'no_thumbnail' ); ?>">Exclude post which have no thumbnail</label>
     		<input class="checkbox" type="checkbox" <?php checked( $instance['no_thumbnail'], 'on' ); ?> id="<?php echo $this->get_field_id('no_thumbnail'); ?>" name="<?php echo $this->get_field_name( 'no_thumbnail' ); ?>" />
 		</p>
-    	<p>
+    		<p>
     		<label for="<?php echo $this->get_field_id( 'date' ); ?>">Show The Date</label>
     		<input class="checkbox" type="checkbox" <?php checked( $instance['date'], 'on' ); ?> id="<?php echo $this->get_field_id('date'); ?>" name="<?php echo $this->get_field_name( 'date' ); ?>" />
 		</p>
 		 <p>
     		<label for="<?php echo $this->get_field_id( 'content' ); ?>">Show The Content</label>
     		<input class="checkbox" type="checkbox" <?php checked( $instance['content'], 'on' ); ?> id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name( 'content' ); ?>" />
-    	    <label for="<?php echo esc_attr( $this->get_field_id( 'number_words' ) ); ?>"><?php echo esc_html__( 'Number of words:', 'text_domain' ); ?></label>
+    	    	<label for="<?php echo esc_attr( $this->get_field_id( 'number_words' ) ); ?>"><?php echo esc_html__( 'Number of words:', 'text_domain' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'number_words' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number_words' ) ); ?>" type="text" value="<?php echo esc_attr( $number_words ); ?>">
 		</p>
 	  	<?php
@@ -158,11 +158,11 @@ class Posts_Category extends WP_Widget {
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? wp_strip_all_tags( $new_instance['title'] ) : '';
 		$instance['thumbnail'] = $new_instance['thumbnail'];
 		$instance['no_thumbnail'] = $new_instance['no_thumbnail'];
-        $instance['date'] = $new_instance['date'];
-        $instance['content'] = $new_instance['content'];
-        $instance['number'] = $new_instance['number'];
-        $instance['number_words'] = $new_instance['number_words'];
-    	$categories = get_categories( array(
+        	$instance['date'] = $new_instance['date'];
+        	$instance['content'] = $new_instance['content'];
+        	$instance['number'] = $new_instance['number'];
+        	$instance['number_words'] = $new_instance['number_words'];
+    		$categories = get_categories( array(
 			'order'   => 'ASC',
 			'hide_empty' => false
 		) );
